@@ -5,6 +5,16 @@
     <input v-model.number="minB">
     <button v-on:click="min()">Min</button>
     {{ minAnswer }}
+    <h1>List</h1>
+    <table>
+
+    </table>
+
+
+
+
+
+
     <h1>Max</h1>
     <input v-model.number="maxA">
     <input v-model.number="maxB">
@@ -30,6 +40,15 @@
     <input v-model.number="bigC">
     <button v-on:click="biggest()">Check</button>
     {{ biggestAnswer }}
+    <h1>Korrutustabel</h1>
+    <input v-model.number="x"/>
+    <input v-model.number="y"/>
+    <button v-on:click="show()">Show</button>
+    <table border="4">
+      <tr v-for="row in table">
+        <td v-for="column in row">{{ column }}</td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -108,6 +127,9 @@ export default {
       'bigB': 0,
       'bigC': 0,
       'biggestAnswer': 0,
+      'x': 0,
+      'y': 0,
+      'table': [[]],
     }
   },
   methods: {
@@ -117,8 +139,17 @@ export default {
     'even': even,
     'smallest': smallest,
     'biggest': biggest,
+    'show': function () {
+      for (let i = 1; i <= this.x; i++) {
+        this.table[i - 1] = []
+        for (let j = 1; j <= this.x; j++) {
+          this.table[i - 1][j - 1] = i * j;
+        }
+      }
+      this.table.splice()
+    }
   }
-
 }
+
 
 </script>
