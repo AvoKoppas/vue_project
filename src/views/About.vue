@@ -5,16 +5,6 @@
     <input v-model.number="minB">
     <button v-on:click="min()">Min</button>
     {{ minAnswer }}
-    <h1>List</h1>
-    <table>
-
-    </table>
-
-
-
-
-
-
     <h1>Max</h1>
     <input v-model.number="maxA">
     <input v-model.number="maxB">

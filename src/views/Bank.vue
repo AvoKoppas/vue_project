@@ -49,6 +49,13 @@ export default {
       'withdrawAnswer': '',
       'transferAnswer': '',
       'deleteAllAnswer': '',
+      'accountNumber': '',
+      'initialBalance': '',
+      'balance': '',
+      'accountNumberTo': '',
+      'transferAmount': '',
+      'withdraw': '',
+      'deposit': ''
     }
   },
   methods: {

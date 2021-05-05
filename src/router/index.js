@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Register from '../views/Register.vue'
 import Bank from "@/views/Bank";
 import List from "@/views/List";
+import Login from "@/views/Login";
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
         path: '/list',
         name: 'List',
         component: List
+    },
+    {
+        path: '/Login',
+        name: 'LOGIN',
+        component: Login
     },
     {
         path: '/about',
